@@ -31,6 +31,7 @@
 </div>
 <hr>
 
+<div class="next_up">
 <h2>Next Up</h2>
 <ul>
 <% @list_of_todos.each do |a_todo| %>
@@ -48,7 +49,9 @@
 <% end %>
 <% end %>
 </ul>
+</div>
 
+<div class="in_progress">
 <h2>In Progress</h2>
 <ul>
 <% @list_of_todos.each do |a_todo| %>
@@ -66,8 +69,9 @@
 <% end %>
 <% end %>
 </ul>
+</div>
 
-
+<div class="done">
 <h2>Done</h2>
 <% @list_of_todos.each do |a_todo| %>
 <% if a_todo.status == "done" %>
@@ -80,3 +84,4 @@
 <% end %>
 <% end %>
 </ul>
+</div>
