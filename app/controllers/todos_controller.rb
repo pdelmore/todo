@@ -35,15 +35,14 @@ class TodosController < ApplicationController
     the_id = params.fetch("path_id")
     the_todo = Todo.where({ :id => the_id }).at(0)
 
-    the_todo.body = params.fetch("query_body")
     the_todo.status = params.fetch("query_status")
-    the_todo.user_id = params.fetch("query_user_id")
+    the_todo.user_id = @current_user.id
 
     if the_todo.valid?
       the_todo.save
-      redirect_to("/todos/#{the_todo.id}", { :notice => "Todo updated successfully."} )
+      redirect_to("/todos/", { :notice => "Todo updated successfully."} )
     else
-      redirect_to("/todos/#{the_todo.id}", { :alert => the_todo.errors.full_messages.to_sentence })
+      redirect_to("/todos/", { :alert => the_todo.errors.full_messages.to_sentence })
     end
   end
 
