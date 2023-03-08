@@ -1,12 +1,11 @@
 <div>
   <div>
     <h1>
-      List of all todos
+      Your todo list
     </h1>
   </div>
 </div>
 
-<hr>
 
 <div>
   <div>
@@ -17,30 +16,16 @@
     <form action="/insert_todo" method="post">
       <div>
         <label for="body_box">
-          Body
+          Describe the task:
         </label>
 
         <input type="text" id="body_box" name="query_body">
-      </div>
 
-      <div>
-        <label for="status_box">
-          Status
-        </label>
-
-        <input type="text" id="status_box" name="query_status">
-      </div>
-
-      <div>
-        <label for="user_id_box">
-          User
-        </label>
-
-        <input type="text" id="user_id_box" name="query_user_id">
+        <input type="hidden" id="status_box" name="query_status" value="next_up">
       </div>
 
       <button>
-        Create todo
+        Add to Next Up
       </button>
     </form>
   </div>

@@ -21,7 +21,7 @@ class TodosController < ApplicationController
     the_todo = Todo.new
     the_todo.body = params.fetch("query_body")
     the_todo.status = params.fetch("query_status")
-    the_todo.user_id = params.fetch("query_user_id")
+    the_todo.user_id = @current_user.id
 
     if the_todo.valid?
       the_todo.save
