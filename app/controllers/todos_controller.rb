@@ -38,13 +38,16 @@ class TodosController < ApplicationController
     the_todo.status = params.fetch("query_status")
     the_todo.user_id = @current_user.id
     the_todo.updated_at = Time.now
+    
 
     if the_todo.valid?
       the_todo.save
+
       redirect_to("/todos/", { :notice => "Todo updated successfully."} )
     else
       redirect_to("/todos/", { :alert => the_todo.errors.full_messages.to_sentence })
     end
+
   end
 
   def destroy

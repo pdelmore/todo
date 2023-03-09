@@ -78,8 +78,9 @@
 <ul>
 <li>
 <%= a_todo.body %><br>
-<small>Completed <%= time_ago_in_words(a_todo.updated_at) %> ago
+<small>Completed at <%= a_todo.updated_at.strftime("%l:%M%P on %d-%b-%Y") %>
 <a href="/delete_todo/<%= a_todo.id %>">Delete</a></small>
+
 </li>
 
 <% end %>
