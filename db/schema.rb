@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_08_214146) do
+ActiveRecord::Schema.define(version: 2023_03_08_233242) do
 
   create_table "todos", force: :cascade do |t|
     t.string "body"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2023_03_08_214146) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "upadted_at"
   end
 
   create_table "users", force: :cascade do |t|

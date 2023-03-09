@@ -37,6 +37,7 @@ class TodosController < ApplicationController
 
     the_todo.status = params.fetch("query_status")
     the_todo.user_id = @current_user.id
+    the_todo.updated_at = Time.now
 
     if the_todo.valid?
       the_todo.save

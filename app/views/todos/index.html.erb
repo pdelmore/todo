@@ -38,8 +38,8 @@
 <% if a_todo.status == "next_up" %>
 <li>
 <%= a_todo.body %><br>
-<%= time_ago_in_words(a_todo.created_at) %> ago<br>
-<a href="/delete_todo/<%= a_todo.id %>">Delete</a>
+<small>Added <%= time_ago_in_words(a_todo.created_at) %> ago
+<a href="/delete_todo/<%= a_todo.id %>">Delete</a></small>
 <form action="/modify_todo/<%= a_todo.id %>" method="post">
   <input type="hidden" name="query_status" value="in_progress">
   <button>Move to In Progress</button>
@@ -58,8 +58,8 @@
 <% if a_todo.status == "in_progress" %>
 <li>
 <%= a_todo.body %><br>
-<%= time_ago_in_words(a_todo.created_at) %> ago<br>
-<a href="/delete_todo/<%= a_todo.id %>">Delete</a>
+<small>Started <%= time_ago_in_words(a_todo.updated_at) %> ago
+<a href="/delete_todo/<%= a_todo.id %>">Delete</a></small>
 <form action="/modify_todo/<%= a_todo.id %>" method="post">
   <input type="hidden" name="query_status" value="done">
   <button>Move to Done</button>
@@ -78,10 +78,11 @@
 <ul>
 <li>
 <%= a_todo.body %><br>
-<%= time_ago_in_words(a_todo.created_at) %> ago<br>
-<a href="/delete_todo/<%= a_todo.id %>">Delete</a>
+<small>Completed <%= time_ago_in_words(a_todo.updated_at) %> ago
+<a href="/delete_todo/<%= a_todo.id %>">Delete</a></small>
 </li>
-<% end %>
+
 <% end %>
 </ul>
+<% end %>
 </div>

@@ -26,3 +26,7 @@
  .done {
   color: grey;
  }
+
+ li {
+  padding: 10px;
+ }
