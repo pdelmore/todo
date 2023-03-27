@@ -1,13 +1,15 @@
-<div>
-  <div>
+
+
+<div class="container">
+  <div class="mx-auto text-center">
     <h1>
       Your todo list
     </h1>
   </div>
-</div>
 
-<div>
-  <div>
+
+<div class="container py-5">
+  <div class="text-center">
     <h2>
       Add a new todo
     </h2>
@@ -17,13 +19,13 @@
         <label for="body_box">
           Describe the task:
         </label>
-
-        <input type="text" id="body_box" name="query_body">
+<br>
+        <textarea class="form-control" id="body_box" name="query_body" row="6"></textarea>
 
         <input type="hidden" id="status_box" name="query_status" value="next_up">
       </div>
-
-      <button>
+<br>
+      <button class="btn btn-primary btn-lg">
         Add to Next Up
       </button>
     </form>
@@ -31,7 +33,9 @@
 </div>
 <hr>
 
-<div class="next_up">
+<div class="container">
+<div class="mx-auto">
+<div class="col next_up py-3 text-center">
 <h2>Next Up</h2>
 <ul>
 <% @list_of_todos.each do |a_todo| %>
@@ -51,7 +55,7 @@
 </ul>
 </div>
 
-<div class="in_progress">
+<div class="in_progress py-3 text-center">
 <h2>In Progress</h2>
 <ul>
 <% @list_of_todos.each do |a_todo| %>
@@ -71,7 +75,7 @@
 </ul>
 </div>
 
-<div class="done">
+<div class="done py-3 text-center">
 <h2>Done</h2>
 <% @list_of_todos.each do |a_todo| %>
 <% if a_todo.status == "done" %>
@@ -86,4 +90,9 @@
 <% end %>
 </ul>
 <% end %>
+</div>
+
+</div>
+</div>
+
 </div>
