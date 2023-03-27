@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](public/screenshot.jpg)
+![](public/screenshot.png)
 
 
 ## Target
