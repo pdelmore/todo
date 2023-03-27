@@ -1,5 +1,10 @@
 # Todo List 1
 
+## Screenshot
+
+![](public/screenshot.jpg)
+
+
 ## Target
 
 You should build a simple todo list manager. [Here is a target to match.](https://todo-list-1.matchthetarget.com)
