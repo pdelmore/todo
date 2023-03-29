@@ -9,7 +9,7 @@ gem 'http'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'
 gem "nokogiri", ">= 1.10.8"
-gem 'rails', '~> 6.0.3', '>= 7.0.4.3'
+gem 'rails', '~> 6.0.3', '>= 6.0.5'
 gem 'sprockets', '< 4'
 gem 'sassc-rails'
 gem 'faker'
